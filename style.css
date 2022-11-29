@@ -6,11 +6,33 @@
   font-family: 'Solway', serif;
 }
 
+header, 
 footer {
   padding: 5%;
+}
+
+button {
+  display: flex;
+  border-radius: 10%;
+  border: 1.5px solid #f3f3f3;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .background-style {
   background-color: #7d87a9;
   color: #f3f3f3;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
 }
