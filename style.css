@@ -11,6 +11,10 @@ footer {
   padding: 5%;
 }
 
+h1 {
+  color: #90caca;
+}
+
 button {
   display: flex;
   border-radius: 10%;
@@ -35,4 +39,39 @@ nav {
   'wght' 400,
   'GRAD' 0,
   'opsz' 48
+}
+
+#desktop-nav {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #mobile-nav {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  #desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 40%;
+  }
+  
+  #desktop-nav li a {
+    text-decoration: none;
+    color: #f3f3f3;
+    cursor: pointer;
+  }
+
+  #desktop-nav li a:hover {
+    color: #90caca;
+  }
+
+  #desktop-nav li a:focus {
+    color: #90caca;
+  }
 }
