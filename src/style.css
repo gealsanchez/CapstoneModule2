@@ -1,10 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Inter:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;600;800&family=Roboto:wght@700&display=swap');
 
-.hello {
-  color: red;
-  background: url('./images/android2.svg');
-}
-
 body {
   font-family: 'Poppins', serif;
+}
+
+.mealsBoard {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 2%;
+  padding: 0% 15%;
+}
+
+.strDiv {
+  margin: 1%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: large;
+}
+
+.likeDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+
+.meals-menu {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1%;
+}
+
+.thumb {
+  height: 300px;
+  width: 300px;
+  border-radius: 5%;
+  align-self: center;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+
+.imgLike {
+  height: 20px;
+}
+
+.imgLike:hover {
+  filter: invert(8%) sepia(98%) saturate(6374%) hue-rotate(246deg) brightness(111%) contrast(147%);
+}
+
+.imgLike:active {
+  filter: invert(42%) sepia(98%) saturate(7352%) hue-rotate(354deg) brightness(98%) contrast(124%);
+}
+
+p {
+  margin: 0%;
+  font-size: 14px;
+}
+
+span {
+  margin: 4%;
+  font-size: 30px;
+}
+
+.hide {
+  display: none;
+}
+
+.buttonComment {
+  border: 1px solid black;
+  border-radius: 4%;
+  width: 40%;
+  margin: 2%;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  margin-left: 30%;
+  object-fit: contain;
+}
+
+.open {
+  background-color: #1c1a19;
+  backdrop-filter: blur(5px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  opacity: 0.9;
+}
+
+.close {
+  position: fixed;
+  right: 2%;
+  padding: 8px;
+}
+
+.imgCancel{
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(282deg) brightness(104%) contrast(106%);
 }
