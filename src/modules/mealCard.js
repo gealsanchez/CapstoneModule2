@@ -2,11 +2,11 @@ const URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/
 import like from '../images/heart.svg';
 import postLike from './postLike.js';
 import closeIcon from '../images/x-circle-fill.svg';
-import commentUI from './commentUI.js';
+import reservationUI from './reservationUI.js';
 
 const myCancel = new Image();
 myCancel.src = closeIcon;
-myCancel.classList = 'imgCancel'
+myCancel.classList = ('imgCancel');
 
 const myLike = new Image();
 myLike.src = like;
@@ -23,17 +23,17 @@ const mealCard = (strMeal, idMeal, strMealThumb, likeNum) => {
     const likeDiv = document.createElement('div');
     likeDiv.className = 'likeDiv';
 
-    const buttonComment = document.createElement('div');
-    buttonComment.className = 'buttonComment';
+    const buttonReservation = document.createElement('div');
+    buttonReservation.className = 'buttonReservation';
 
     div.innerHTML = `<img class='thumb' src='${strMealThumb}'>`;
     strDiv.innerHTML = `<span>${strMeal}</span>`
     likeDiv.innerHTML = `<span class='hide'>${idMeal}</span><img class='imgLike' src='${like}'><div class="stop">${likeNum}</div><p class="stop">Likes</p>`
-    buttonComment.innerHTML = `<div>Comments</div><span class='hide'>${idMeal}</span>`
+    buttonReservation.innerHTML = `<div>Reservations</div><span class='hide'>${idMeal}</span>`
 
     strDiv.appendChild(likeDiv);
     div.appendChild(strDiv);
-    div.appendChild(buttonComment);
+    div.appendChild(buttonReservation);
     board.appendChild(div);
 
     likeDiv.addEventListener('click', (e) => {
@@ -50,14 +50,15 @@ const mealCard = (strMeal, idMeal, strMealThumb, likeNum) => {
     const cancel = document.querySelector('.close');
     cancel.appendChild(myCancel);
 
-    buttonComment.addEventListener('click', (e) => {
+    buttonReservation.addEventListener('click', (e) => {
         overlay.style.display = 'block';
         console.log(e.target.nextElementSibling)
-        commentUI(e.target.nextElementSibling.textContent);
+        reservationUI(e.target.nextElementSibling.textContent);
     });
 
     cancel.addEventListener('click', (e) => {
         overlay.style.display = 'none';
+        document.querySelector('.reservation-board').innerHTML = '';
     });
 
 };

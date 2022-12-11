@@ -82,23 +82,61 @@ span {
 }
 
 .open {
-  background-color: #1c1a19;
-  backdrop-filter: blur(5px);
+  background-color: rgba(3, 0, 0, 0.5);
   position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
   right: 0;
   display: none;
-  opacity: 0.9;
 }
 
 .close {
+  margin-left: 70%;
+  margin-top: 6%;
   position: fixed;
-  right: 2%;
-  padding: 8px;
+  border-radius: 5px;
 }
 
-.imgCancel{
+.reservation-board {
+  padding: 5px;
+  margin: 5% auto; 
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 470px;
+  background-color: rgb(255, 0, 0, 0.9);
+  border-radius: 10px;
+}
+
+.reservation-board #imgThumb {
+  width: 300px;
+  height: 300px;
+  border-radius: 5%;
+  order: -1;
+  margin-bottom: 3%;
+}
+
+.reservation-board button{
+  width: 20%;
+  padding: 1% 0%;
+  border-radius: 5px;
+  margin-left: 10%;
+}
+
+.reservation-board input{
+  margin: 1% 10%;
+  width: 30%;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.imgCancel {
+  height: 20px;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(282deg) brightness(104%) contrast(106%);
+}
+
+form{
+  display: flex;
+  flex-direction: column;
 }
