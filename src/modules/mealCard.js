@@ -40,7 +40,7 @@ const mealCard = (strMeal, idMeal, strMealThumb, likeNum) => {
     }
     postLike(e.target.previousElementSibling.textContent);
     const sumlike = e.target.nextElementSibling.textContent;
-    e.target.nextElementSibling.textContent = parseInt(sumlike,10) + 1;
+    e.target.nextElementSibling.textContent = parseInt(sumlike, 10) + 1;
   });
 
   const overlay = document.querySelector('.open');

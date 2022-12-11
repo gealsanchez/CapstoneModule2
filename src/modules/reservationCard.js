@@ -3,7 +3,7 @@ import postReservation from './postReservation.js';
 const reservationCard = (strMeal, strMealThumb, strInstructions, idMeal) => {
   const reservationBoard = document.querySelector('.reservation-board');
 
-  const imgThumb = document.createElement('img')
+  const imgThumb = document.createElement('img');
   imgThumb.id = 'imgThumb';
   imgThumb.src = strMealThumb;
 

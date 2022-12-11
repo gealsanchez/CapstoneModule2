@@ -141,7 +141,7 @@ form {
   flex-direction: column;
 }
 
-.buttonReservation{
+.buttonReservation {
   border: 2px solid black;
   border-radius: 3px;
   cursor: pointer;
