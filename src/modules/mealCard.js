@@ -1,4 +1,3 @@
-const URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xJ4HvJykr7cdlrGqH18j/likes';
 import like from '../images/heart.svg';
 import postLike from './postLike.js';
 import closeIcon from '../images/x-circle-fill.svg';
@@ -13,7 +12,6 @@ myLike.src = like;
 myLike.classList = 'imgLike'
 
 const mealCard = (strMeal, idMeal, strMealThumb, likeNum) => {
-
     const board = document.querySelector('.meals-menu');
 
     const div = document.createElement('div');
@@ -28,8 +26,8 @@ const mealCard = (strMeal, idMeal, strMealThumb, likeNum) => {
 
     div.innerHTML = `<img class='thumb' src='${strMealThumb}'>`;
     strDiv.innerHTML = `<span>${strMeal}</span>`
-    likeDiv.innerHTML = `<span class='hide'>${idMeal}</span><img class='imgLike' src='${like}'><div class="stop">${likeNum}</div><p class="stop">Likes</p>`
-    buttonReservation.innerHTML = `<div>Reservations</div><span class='hide'>${idMeal}</span>`
+    likeDiv.innerHTML = `<span class='hide'>${idMeal}</span><img class='imgLike' src='${like}'><div class="stop">${likeNum}</div><p class="stop">Likes</p>`;
+    buttonReservation.innerHTML = `<div>Reservations</div><span class='hide'>${idMeal}</span>`;
 
     strDiv.appendChild(likeDiv);
     div.appendChild(strDiv);
@@ -40,7 +38,6 @@ const mealCard = (strMeal, idMeal, strMealThumb, likeNum) => {
         if (e.target.classList.contains('stop')) {
             return;
         }
-        console.log(e.target.previousElementSibling.textContent)
         postLike(e.target.previousElementSibling.textContent);
         const sumlike = e.target.nextElementSibling.textContent;
         e.target.nextElementSibling.textContent = parseInt(sumlike) + 1;
@@ -52,15 +49,13 @@ const mealCard = (strMeal, idMeal, strMealThumb, likeNum) => {
 
     buttonReservation.addEventListener('click', (e) => {
         overlay.style.display = 'block';
-        console.log(e.target.nextElementSibling)
         reservationUI(e.target.nextElementSibling.textContent);
     });
 
-    cancel.addEventListener('click', (e) => {
+    cancel.addEventListener('click', () => {
         overlay.style.display = 'none';
         document.querySelector('.reservation-board').innerHTML = '';
     });
-
 };
 
 export default mealCard;

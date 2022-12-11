@@ -12,7 +12,6 @@ const mealUI = async () => {
     likes.forEach((item) => {
       if (item.item_id === meal.idMeal) {
         likeNum = item.likes;
-        console.log(likeNum)
       };
     });
     mealCard(meal.strMeal, meal.idMeal, meal.strMealThumb, likeNum);
