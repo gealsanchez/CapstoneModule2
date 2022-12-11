@@ -15,6 +15,6 @@ const postReservation = async (name, initDate, finalDate, idMeal) => {
   });
   const data = await response.json();
   return data;
-}
+};
 
 export default postReservation;

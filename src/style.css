@@ -140,3 +140,12 @@ form {
   display: flex;
   flex-direction: column;
 }
+
+.buttonReservation{
+  border: 2px solid black;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 40%;
+  text-align: center;
+  margin-bottom: 2%;
+}

@@ -1,6 +1,7 @@
-const URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xJ4HvJykr7cdlrGqH18j/likes';
 import getMeals from './getMeals.js';
 import mealCard from './mealCard.js';
+
+const URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/xJ4HvJykr7cdlrGqH18j/likes';
 
 const mealUI = async () => {
   const response = await fetch(URL);
@@ -12,7 +13,7 @@ const mealUI = async () => {
     likes.forEach((item) => {
       if (item.item_id === meal.idMeal) {
         likeNum = item.likes;
-      };
+      }
     });
     mealCard(meal.strMeal, meal.idMeal, meal.strMealThumb, likeNum);
   });
